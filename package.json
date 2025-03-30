@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "src/app.js",
-    "dev":"nodemon src/app.js"
+    "dev": "nodemon src/app.js"
   },
   "keywords": [
     "nodejs"
@@ -13,6 +13,7 @@
   "author": "renga",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "mongoose": "^8.13.1"
   }
 }

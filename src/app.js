@@ -1,42 +1,22 @@
 const express = require('express');
-
+const {auth} = require('./middleware/auth')
 const app = express();
 
 
-app.use("/test",(req,res)=>{
-    res.send("test from server")
+
+app.use("/admin",auth)
+
+app.get("/admin/alldata", (req, res) => {
+
+    res.send("all data send")
 });
 
-app.get('/',(req,res)=>{
-    res.send("firstname:Renga")
-})
-
-app.get('/use?r',(req,res)=>{
-    res.send("firstname:Renga")
-})
-
-app.get('/use+r',(req,res)=>{
-    res.send("firstname:Renga")
-})
-
-app.get('/use*r',(req,res)=>{
-    res.send("firstname:Renga")
-})
-
-app.post('/user',(req,res)=>{
-    res.send("firstname:vikram")
-})
-
-app.patch('/user',(req,res)=>{
-    res.send("firstname:Renga")
-})
-
-app.delete('/user',(req,res)=>{
-    res.send("firstname:Renga")
+app.delete("/admin/deletingData", (req, res) => {
+    res.send("data deleted")
 })
 
 
 
-app.listen(7777,()=>{
+app.listen(7777, () => {
     console.log("server running port 7777")
 })

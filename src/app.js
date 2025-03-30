@@ -7,9 +7,33 @@ app.use("/test",(req,res)=>{
     res.send("test from server")
 });
 
-app.use('/hello',(req,res)=>{
-    res.send("hello from server")
-});
+app.get('/',(req,res)=>{
+    res.send("firstname:Renga")
+})
+
+app.get('/use?r',(req,res)=>{
+    res.send("firstname:Renga")
+})
+
+app.get('/use+r',(req,res)=>{
+    res.send("firstname:Renga")
+})
+
+app.get('/use*r',(req,res)=>{
+    res.send("firstname:Renga")
+})
+
+app.post('/user',(req,res)=>{
+    res.send("firstname:vikram")
+})
+
+app.patch('/user',(req,res)=>{
+    res.send("firstname:Renga")
+})
+
+app.delete('/user',(req,res)=>{
+    res.send("firstname:Renga")
+})
 
 
 

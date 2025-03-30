@@ -1,0 +1,18 @@
+{
+  "name": "devtinder",
+  "version": "1.0.0",
+  "description": "devtinder",
+  "main": "index.js",
+  "scripts": {
+    "start": "src/app.js",
+    "dev":"nodemon src/app.js"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "renga",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

@@ -16,8 +16,8 @@ const auth = (req, res,next) => {
 
 const authCheck = async (req,res,next) =>{
     try {
-    const cookieData = req.cookies;
-    const passVerify = await jwt.verify(cookieData.token, "Renga@123");
+     const token = req.cookies?.token;
+    const passVerify = await jwt.verify(token, "Renga@123");
     const {id} = passVerify;
     const user = await User.findById(id)
     if(!user){

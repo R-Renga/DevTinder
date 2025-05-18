@@ -13,7 +13,7 @@ requestRouter.post("/request/send/:status/:toUserId", authCheck, async (req, res
     const toUserId = req.params.toUserId;
     const status = req.params.status
 
-    const allowedStatus = ["interested", "ignored"];
+    const allowedStatus = ["interested", "ignore"];
 
     if (!allowedStatus.includes(status)) {
       throw new Error("invalid status")

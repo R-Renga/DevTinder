@@ -11,7 +11,7 @@ profileRouter.get("/profile/view", authCheck, async (req, res) => {
     res.send(data);
   } catch (error) {
     console.log("error record", error);
-    res.status(400).send("error message" + error.message);
+    res.status(401).send("error message" + error.message);
   }
 });
 
@@ -31,7 +31,7 @@ profileRouter.patch("/profile/edit", authCheck, async (req, res) => {
     });
   } catch (error) {
     console.log("error record", error);
-    res.status(400).send("error message" + error.message);
+    res.status(401).send("error message" + error.message);
   }
 });
 

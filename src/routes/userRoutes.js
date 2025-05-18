@@ -107,13 +107,13 @@ userRouter.get("/feed", authCheck, async (req, res) => {
                 }
             ]
         })
-        .select("firstName lastName")
+        .select("firstName lastName photourl")
         .skip(skip)
         .limit(limit)
 
         console.log(allUniqueConnections)
         res.status(200).json({
-            allFeedUser
+           data: allFeedUser
         })
     } catch (error) {
         console.log(error);

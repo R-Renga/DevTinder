@@ -16,7 +16,10 @@ const auth = (req, res,next) => {
 
 const authCheck = async (req,res,next) =>{
     try {
-     const token = req.cookies?.token;
+    const {token} = req.cookies;
+    if(!token){
+        return res.status(401).send("unauthorized")
+    }
     const passVerify = await jwt.verify(token, "Renga@123");
     const {id} = passVerify;
     const user = await User.findById(id)
@@ -28,7 +31,7 @@ const authCheck = async (req,res,next) =>{
     }
     } catch (error) {
     console.log("error record", error);
-    res.status(400).send("error message" + error.message);
+    res.status(401).send("error message" + error.message);
     }
     
 

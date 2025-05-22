@@ -4,7 +4,7 @@
   "description": "devtinder",
   "main": "app.js",
   "scripts": {
-    "start": "src/app.js",
+    "start": "node app.js",
     "dev": "nodemon src/app.js"
   },
   "keywords": [

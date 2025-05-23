@@ -57,7 +57,7 @@ userSchema.methods.getJwt = async function(){
 
     const decoded = await jwt.sign({
         id: user._id
-    }, "Renga@123",{expiresIn:"1h"});
+    },process.env.JWT_SECRET,{expiresIn:"1h"});
 
     return decoded;
 }

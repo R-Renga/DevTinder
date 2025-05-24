@@ -7,7 +7,8 @@ const profileRouter = require("./src/routes/profileRouter");
 const requestRouter = require("./src/routes/request");
 const userRouter = require("./src/routes/userRoutes");
 const cors = require("cors");
-require('dotenv').config()
+require('dotenv').config();
+require("./src/utilis/cronjobs")
 
 app.use(cors({
     origin:"http://localhost:5173",

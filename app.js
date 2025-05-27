@@ -12,7 +12,7 @@ require('dotenv').config();
 require("./src/utilis/cronjobs")
 
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"http://13.60.88.118",
     credentials:true
 }))
 app.use(express.json());

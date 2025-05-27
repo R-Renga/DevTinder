@@ -7,6 +7,7 @@ const profileRouter = require("./src/routes/profileRouter");
 const requestRouter = require("./src/routes/request");
 const userRouter = require("./src/routes/userRoutes");
 const cors = require("cors");
+const premiumRouter = require("./src/routes/premium");
 require('dotenv').config();
 require("./src/utilis/cronjobs")
 
@@ -23,6 +24,7 @@ app.use("/",authRouter);
 app.use("/",profileRouter)
 app.use("/",requestRouter)
 app.use("/",userRouter);
+app.use("/",premiumRouter)
 
 
 connectDB()
